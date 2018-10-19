@@ -1,6 +1,6 @@
 {
   "name": "pietro",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Convert PDF files to PNG and text files",
   "main": "build/index.js",
   "files": [
