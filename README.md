@@ -92,5 +92,4 @@ Extract textual content from the PDF into its own file.
 
 ```js
 await pdf.toText('./content.txt');
-
-
+```
