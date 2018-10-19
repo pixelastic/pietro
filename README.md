@@ -1,84 +1,96 @@
-# firost
+# π Pietro
 
-Async glob, read and write files in nodejs.
+Utilities to split PDF files into smaller files, generate thumbnails and extract
+textual content.
 
-I was getting tired of having to write the same helpers and wrappers for
-reading/writing files, so I packaged the best libraries and made an API that
-works well with `async`/`await`.
+This module is a wrapper on top of `pdftk`, Apache Tika and other tools to
+transform a raw PDF into a format that could be parsed by a machine. My main
+use-case was to push the content to an Algolia index.
 
-
-## glob(pattern)
-
-Returns an array of filepaths matching the specified glob pattern.
-
-```js
-const paths = await firost.glob('./src/**/*.css');
-```
-
-## isDirectory(path)
-
-Checks if the given path exists and is a directory
+_⚠ This package has been created out of a personal need of sharing those methods
+across projects. The default (or sometimes hardcoded) values of some
+of the methods make sense to me. If they do not fit your needs, feel free to
+open issues or pull requests to adapt the code, I'd be happy to make it more
+extensible._
 
 ```js
-if (await firost.isDirectory('./dist')) {
-  console.info("Website created");
-}
+const pdf = pietro.init('./path/to/file.pdf');
+
+// Split a large file into smaller files
+await pdf.toIndividualPages('./dist');
+
+// Convert one page to PNG
+const page42 = pietro.init('./dist/0042.pdf');
+await page42.toImage('./images/0042.pdf');
+
+// Convert one page to text
+await page42.toText('./text/0042.txt');
 ```
 
-## mkdirp(path)
+# Requirements
 
-Creates a set of nested directories if they don't yet exist.
+The module internally calls command-line tools to do the grunt work. You need
+the following commands to be available in your `$PATH`:
+
+- `convert` (from [ImageMagick](https://www.imagemagick.org/script/index.php))
+- `pdfinfo` (from [Xpdf](https://www.xpdfreader.com/))
+- `pdftk` (from
+  [PDFToolkit](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/))
+- `grep` and `sed` (but you most probably already have them)
+
+You'll also need `java` available, and the environment variable `TIKA_JAR` set
+to the path to the Apache Tika `.jar` file (that you can download from
+[here](https://tika.apache.org/download.html))
+
+# Methods
+
+## init(pathToPdf)
+
+Create a Pietro instance of a given PDF file.
 
 ```js
-await firost.mkdirp('./dist/css');
+const pdf = pietro.init('./path/to/file.pdf');
 ```
 
-## read(path)
+## extractPage(pageIndex, destination)
 
-Returns the textual content of a file located at the specified filepath.
+Extract one specific page of the PDF.
 
 ```js
-const content = await firost.read('./src/css/style.css');
+await pdf.extractPage(42, './page-42.pdf');
 ```
 
-## readJson(path)
+## pageCount()
 
-Returns the content of a JSON file as a JavaScript object.
+Get the number of pages in the PDF.
 
 ```js
-const data = await firost.readJson('./records.json');
+const count = await pdf.pageCount();
+console.info(`The file has ${count} pages`);
 ```
 
-## shell(command)
+## toIndividualPages(destinationDirectory)
 
-Execute the given command in a shell. Returns `stdout`, throws with `stderr`.
+Split the PDF into one file per page, in the specified directory.
 
 ```js
-try {
-  const result = await firost.shell('git checkout -b master');
-  console.info("Created branch master");
-} catch(err) {
-  console.info("Count not create master")
-  console.error(err);
-}
+await pdf.toIndividualPages('./pages');
+// Will create ./pages/0001.pdf, ./pages/0002.pdf, etc
 ```
 
-## write(destination, content)
+## toImage(destination)
 
-Write content to a file on disk. This will create all needed directories if they
-don't exist.
+Convert the PDF to an image. This is better applied on one-page PDFs.
 
 ```js
-await firost.write('./dist/content.txt', "This is my content");
+await pdf.toImage('./thumbnail.png');
 ```
 
-## writeJson
+## toText(destination)
 
-Write data to a JSON file on disk. Keys will be ordered alphabetically, for
-easier diffing of the file.
+Extract textual content from the PDF into its own file.
 
 ```js
-const records = [{ name: 'foo', value: 2 }, { value: 3, name: 'bar' }];
-await firost.writeJson('./records/records.json, records);
-```
+await pdf.toText('./content.txt');
+
 

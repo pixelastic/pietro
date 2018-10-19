@@ -154,7 +154,6 @@ const module = {
     const dependencies = {
       convert: 'ImageMagick',
       grep: 'basic shell utility',
-      gs: 'Ghostscript',
       java: 'Java',
       pdfinfo: 'part of Xpdf',
       pdftk: 'PDFToolkit',
