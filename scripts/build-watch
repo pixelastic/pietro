@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
+set -e
 
-mkdir -p ./build
-
-NODE_ENV=development webpack --watch --config ./webpack.config.dev.js
+aberlaas build "$@" --watch

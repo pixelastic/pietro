@@ -1,6 +1,5 @@
 /* eslint-disable import/no-commonjs */
+const jestConfig = require('aberlaas/build/configs/jest.js');
 module.exports = {
-  bail: true,
-  resetMocks: true,
-  restoreMocks: true,
+  ...jestConfig,
 };
