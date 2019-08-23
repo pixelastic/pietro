@@ -2,5 +2,6 @@ You don't seem to have Apache Tika installed on your system.
 
 Apache Tika is used to extract text from PDF files.
 
-You need to set the `TIKA_JAR` env variable to the path to your Apache Tika jar.
-You can download Apache Tika jar file from here: **https://tika.apache.org/download.html**
+You can download Apache Tika jar file from here: [https://tika.apache.org/download.html]()
+
+Default location for the file is `~/local/src/tika/tika.jar`, but you can override it with the `TIKA_JAR` environment variable.
