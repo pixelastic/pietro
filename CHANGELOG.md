@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/pixelastic/pietro/compare/0.3.0...0.4.0) (2019-10-26)
+
+
+### Features
+
+* **extractAllPages:** Make it waaaaaay faster ([40b7891](https://github.com/pixelastic/pietro/commit/40b7891c0ee05244b0d33909822258ce64e54776))
+
 # [0.3.0](https://github.com/pixelastic/pietro/compare/0.2.0...0.3.0) (2019-10-26)
 
 
