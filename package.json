@@ -1,11 +1,8 @@
 {
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/pixelastic/pietro/issues"
-  },
+  "author": "Pixelastic <tim@pixelastic.com>",
   "dependencies": {
-    "firost": "^0.10.0",
-    "golgoth": "^0.3.2",
+    "firost": "0.14.0",
+    "golgoth": "0.4.2",
     "marked": "^0.7.0",
     "marked-terminal": "^3.3.0",
     "progress": "2.0.1",
@@ -13,31 +10,22 @@
   },
   "description": "Convert PDF files to PNG and text files",
   "devDependencies": {
-    "aberlaas": "^0.2.1"
+    "aberlaas": "0.6.9"
   },
   "files": [
     "build/"
   ],
-  "homepage": "https://github.com/pixelastic/pietro#readme",
   "keywords": [],
-  "license": "ISC",
+  "license": "MIT",
   "main": "build/index.js",
   "name": "pietro",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pixelastic/pietro.git"
-  },
+  "repository": "git@github.com:pixelastic/pietro.git",
   "scripts": {
     "build": "./scripts/build",
     "build:watch": "./scripts/build-watch",
+    "husky:precommit": "./scripts/husky-precommit",
     "lint": "./scripts/lint",
-    "lint:css": "./scripts/lint-css",
-    "lint:css:fix": "./scripts/lint-css-fix",
     "lint:fix": "./scripts/lint-fix",
-    "lint:js": "./scripts/lint-js",
-    "lint:js:fix": "./scripts/lint-js-fix",
-    "lint:json": "./scripts/lint-json",
-    "lint:json:fix": "./scripts/lint-json-fix",
     "release": "./scripts/release",
     "test": "./scripts/test",
     "test:watch": "./scripts/test-watch"
