@@ -3,7 +3,7 @@
 Utilities to split PDF files into smaller files, generate thumbnails and extract
 textual content.
 
-This module is a wrapper on top of `pdftk`, Apache Tika and other tools to
+This module is a wrapper on top of `pdftk`, `xpdf` and other tools to
 transform a raw PDF into a format that could be parsed by a machine.
 
 _⚠ This package has been created out of a personal need of sharing those methods
@@ -39,10 +39,6 @@ the following commands to be available in your `$PATH`:
 - `pdfimages` (from [Xpdf][2])
 - `pdftk` (from [PDFToolkit][3])
 - `grep` and `sed` (but you most probably already have them)
-
-You'll also need `java` available, and the environment variable `TIKA_JAR` set
-to the path to the Apache Tika `.jar` file (that you can download from
-[here][4])
 
 ## Methods
 
@@ -108,4 +104,3 @@ await pdf.extractImages('./images');
 [1]: https://www.imagemagick.org/script/index.php
 [2]: https://www.xpdfreader.com/
 [3]: https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
-[4]: https://tika.apache.org/download.html
