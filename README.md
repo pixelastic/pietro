@@ -16,14 +16,17 @@ extensible._
 const pdf = await pietro.init('./path/to/file.pdf');
 
 // Split a large file into smaller files
-await pdf.extactAllPages('./dist');
+await pdf.extractAllPages('./dist');
 
 // Convert one page to PNG
-const page42 = pietro.init('./dist/0042.pdf');
+const page42 = await pietro.init('./dist/0042.pdf');
 await page42.toImage('./images/0042.pdf');
 
 // Get textual content of one page
 await page42.getText();
+
+// Extract all images from a pdf
+await page42.extractImages('./images');
 ```
 
 ## Requirements
@@ -33,6 +36,7 @@ the following commands to be available in your `$PATH`:
 
 - `convert` (from [ImageMagick][1])
 - `pdfinfo` (from [Xpdf][2])
+- `pdfimages` (from [Xpdf][2])
 - `pdftk` (from [PDFToolkit][3])
 - `grep` and `sed` (but you most probably already have them)
 
@@ -90,6 +94,15 @@ Convert the PDF to an image. This is better applied on one-page PDFs.
 
 ```js
 await pdf.toImage('./thumbnail.png');
+```
+
+### .extractImages(destinationDirectory)
+
+Extract all images embedded in the PDF into the specified directory.
+
+```js
+await pdf.extractImages('./images');
+// Will create ./images/000.png, ./images/001.png, etc
 ```
 
 [1]: https://www.imagemagick.org/script/index.php
