@@ -101,6 +101,28 @@ await pdf.extractImages('./images');
 // Will create ./images/000.png, ./images/001.png, etc
 ```
 
+### .imageList()
+
+Returns an array of metadata about all images in the file
+
+```js
+await pdf.imageList()
+//
+//  [
+//    {
+//      pageIndex: 1,
+//      imageIndex: 0,
+//      type: 'image',
+//      width: 2625,
+//      height: 1688,
+//      color: 'icc',
+//      objectID: 72,
+//      size: '45.5K'
+//    },
+//    […]
+//  ]
+```
+
 [1]: https://www.imagemagick.org/script/index.php
 [2]: https://www.xpdfreader.com/
 [3]: https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
