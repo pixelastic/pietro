@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/pixelastic/pietro/compare/0.4.0...0.5.0) (2019-10-27)
+
+
+### Features
+
+* **imageList:** Add .imageList, to get metadata info about images ([45bff26](https://github.com/pixelastic/pietro/commit/45bff2616191f475ee83f149a86350bdaa25a090))
+
 # [0.4.0](https://github.com/pixelastic/pietro/compare/0.3.0...0.4.0) (2019-10-26)
 
 
