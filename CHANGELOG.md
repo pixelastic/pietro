@@ -1,3 +1,10 @@
+## [0.5.1](https://github.com/pixelastic/pietro/compare/0.5.0...0.5.1) (2019-10-27)
+
+
+### Bug Fixes
+
+* **imageList:** Fix shell call ([fe2434b](https://github.com/pixelastic/pietro/commit/fe2434beb59772d67b28823b1914bddce502dd65))
+
 # [0.5.0](https://github.com/pixelastic/pietro/compare/0.4.0...0.5.0) (2019-10-27)
 
 
