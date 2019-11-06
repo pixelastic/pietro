@@ -3388,10 +3388,10 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
-firost@0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/firost/-/firost-0.14.0.tgz#c4723ba4405403f61f4ee0c634887e028b3b3f0d"
-  integrity sha512-iGLT9g4t1Zv76GhjnOhvRUxujfdgFfkH+ysMZBWgyIC0LS5HhVsN3rKghs8SnOmLmk1y3oD+xNOJXbS3NUDlZw==
+firost@0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/firost/-/firost-0.16.0.tgz#283c5a3ef1ce7353ad329548ea49587c966867b7"
+  integrity sha512-3nxa++AQ860w1mc8XkdQN79oPtmT5NuaSiuMzOnr92lMT8+6VbgErAO8UJex3qcZI0lT76VliT8GC8QtVQ9X+Q==
   dependencies:
     chokidar "3.2.1"
     esm "^3.2.25"
@@ -3403,6 +3403,7 @@ firost@0.14.0:
     is-glob "4.0.1"
     json-stable-stringify "1.0.1"
     nanoid "^2.1.1"
+    ora "4.0.2"
     shelljs "0.8.3"
     which "2.0.1"
 
