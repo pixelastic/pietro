@@ -9,7 +9,7 @@
   },
   "description": "Convert PDF files to PNG and text files",
   "devDependencies": {
-    "aberlaas": "0.6.9"
+    "aberlaas": "0.7.0"
   },
   "files": [
     "build/"
