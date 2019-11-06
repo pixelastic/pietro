@@ -5,7 +5,7 @@
     "golgoth": "0.4.2",
     "marked": "^0.7.0",
     "marked-terminal": "^3.3.0",
-    "progress": "2.0.1"
+    "progress": "2.0.3"
   },
   "description": "Convert PDF files to PNG and text files",
   "devDependencies": {
