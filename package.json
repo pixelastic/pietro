@@ -4,7 +4,7 @@
     "firost": "0.16.0",
     "golgoth": "0.5.0",
     "marked": "^0.7.0",
-    "marked-terminal": "^3.3.0"
+    "marked-terminal": "^4.0.0"
   },
   "description": "Convert PDF files to PNG and text files",
   "devDependencies": {
