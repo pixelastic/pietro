@@ -3,7 +3,7 @@
   "dependencies": {
     "firost": "2.0.6",
     "golgoth": "1.5.0",
-    "marked": "1.2.0",
+    "marked": "1.2.9",
     "marked-terminal": "4.1.0"
   },
   "description": "Convert PDF files to PNG and text files",
