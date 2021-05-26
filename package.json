@@ -1,14 +1,14 @@
 {
   "author": "Pixelastic <tim@pixelastic.com>",
   "dependencies": {
-    "firost": "2.0.6",
+    "firost": "2.13.1",
     "golgoth": "2.0.0",
     "marked": "2.0.0",
     "marked-terminal": "4.1.1"
   },
   "description": "Convert PDF files to PNG and text files",
   "devDependencies": {
-    "aberlaas": "1.13.2"
+    "aberlaas": "1.22.0"
   },
   "files": [
     "lib/*.js",
