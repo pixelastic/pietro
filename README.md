@@ -123,6 +123,24 @@ await pdf.imageList()
 //  ]
 ```
 
+## Development
+
+As this module requires binary to be installed on the machine, the CircleCI
+instance used to run tests have those binaries installed (check
+`.circleci/config.yml` and `./scripts/install-dependencies`).
+
+Upgrading the base CircleCI image to have a newer version of Node usually also
+upgrades the underlying OS used in the image, which can affect the binaries
+installed. To better troubleshoot how to install the needed binaries on
+CircleCI, a helper script (`yarn run simulate-circleci`) is included, which
+spawns a Docker image similar to the one used on CircleCI.
+
+Once inside the container, you can try running the tests, and if you see any
+failure, you can try running the actual command and see if all dependencies are
+present. Some versions of Ubuntu no longer have xpdf in their package and
+require a manual install, or the default ImageMagick policy might disable
+converting PDFs.
+
 [1]: https://www.imagemagick.org/script/index.php
 [2]: https://www.xpdfreader.com/
 [3]: https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/

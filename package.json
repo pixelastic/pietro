@@ -21,6 +21,7 @@
   "repository": "git@github.com:pixelastic/pietro.git",
   "scripts": {
     "ci": "./scripts/ci",
+    "simulate-circleci": "./scripts/simulate-circleci",
     "husky:precommit": "./scripts/husky-precommit",
     "lint": "./scripts/lint",
     "lint:fix": "./scripts/lint-fix",
