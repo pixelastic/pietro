@@ -14,6 +14,9 @@
     "lib/*.js",
     "instructions/"
   ],
+  "engines": {
+    "node": ">=14.17.0"
+  },
   "keywords": [],
   "license": "MIT",
   "main": "lib/main.js",
