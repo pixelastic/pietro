@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# This will install all the needed binaries to convert PDF.
+set -e
+
+# This script should only be used inside a docker container. As it installs
+# stuff system-wide, it's the reponsibility of the host to install those
+# dependencies.
+if [[ -z "$CIRCLECI" ]]; then
+  echo "Warning: This script should only be run on CircleCi, or in a Docker container"
+  exit 1
+fi
+
+sudo apt-get update
+
+sudo apt-get install -y \
+  pdftk \
+  ghostscript \
+  imagemagick
+
+# Ubuntu 20.04 do not have xpdf in its sources; instead we'll download the .deb
+# (and its libpoppler dependency) and install it manually
+cd /tmp/
+LIBPOPPLER_URL="http://security.ubuntu.com/ubuntu/pool/main/p/poppler/libpoppler73_0.62.0-2ubuntu2.12_amd64.deb"
+XPDF_URL="http://archive.ubuntu.com/ubuntu/pool/universe/x/xpdf/xpdf_3.04-7_amd64.deb"
+wget $LIBPOPPLER_URL -O ./libpoppler.deb
+wget $XPDF_URL -O ./xpdf.deb
+sudo apt-get install ./libpoppler.deb ./xpdf.deb
+
+# By default ImageMagick disallow converting PDFs, so we need to update the
+# policy to allow it
+sudo sed -i '/PDF/s/none/read|write/' /etc/ImageMagick-6/policy.xml
