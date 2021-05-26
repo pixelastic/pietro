@@ -1,5 +1,5 @@
 # Build from same image as CircleCI
-FROM cimg/node:14.17.0
+FROM cimg/node:16.2.0
 ENV CIRCLECI=1
 
 # Add colored output
