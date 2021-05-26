@@ -1,6 +1,6 @@
 # Build from same image as CircleCI
 FROM cimg/node:14.17.0
-ENV CIRCLE_CI=1
+ENV CIRCLECI=1
 
 # Add colored output
 ENV TERM=xterm-256color

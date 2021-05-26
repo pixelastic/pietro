@@ -2,12 +2,10 @@
 # This will install all the needed binaries to convert PDF.
 set -e
 
-# TODO: Update .circleci/config.yml so it installs the same
-
 # This script should only be used inside a docker container. As it installs
 # stuff system-wide, it's the reponsibility of the host to install those
 # dependencies.
-if [[ -z "$CIRCLE_CI" ]]; then
+if [[ -z "$CIRCLECI" ]]; then
   echo "Warning: This script should only be run on CircleCi, or in a Docker container"
   exit 1
 fi
