@@ -8,7 +8,7 @@
   },
   "description": "Convert PDF files to PNG and text files",
   "devDependencies": {
-    "aberlaas": "1.24.3"
+    "aberlaas": "1.24.6"
   },
   "files": [
     "lib/*.js",
