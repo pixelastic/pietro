@@ -3258,10 +3258,10 @@ firost@2.16.2:
     untildify "4.0.0"
     which "2.0.2"
 
-firost@2.16.3:
-  version "2.16.3"
-  resolved "https://registry.yarnpkg.com/firost/-/firost-2.16.3.tgz#b5589e05639f03d4e95c97c7fbba8d60fb349304"
-  integrity sha512-/lyqKUvAe4t2GueTFrZT+IGX+2SAXBp2kHGbqI6QAI8EzWouTi0dciWoseAgby7uIkLnq/1bHsYBioGr8X1OAg==
+firost@2.16.4:
+  version "2.16.4"
+  resolved "https://registry.yarnpkg.com/firost/-/firost-2.16.4.tgz#4c81b4bff3ea23810ae00e5acacc40f3a81006bf"
+  integrity sha512-Zp3FFt3x7/90VeeXQlXNELsiy6iHO6X/Nv6sgrkLgZmbuFpisO3pf4v5QwgO9fr204rFDBTyzJuxUrwr++3bEQ==
   dependencies:
     callsites "3.1.0"
     chokidar "3.5.2"
