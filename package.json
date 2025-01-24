@@ -12,10 +12,7 @@
     "node": ">=18.18.0"
   },
   "packageManager": "yarn@4.6.0",
-  "files": [
-    "lib/*.js",
-    "instructions/"
-  ],
+  "files": ["lib/*.js", "instructions/"],
   "exports": {
     ".": "lib/main.js"
   },
