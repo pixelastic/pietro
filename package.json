@@ -12,19 +12,22 @@
     "node": ">=18.18.0"
   },
   "packageManager": "yarn@4.6.0",
-  "files": ["lib/*.js", "instructions/"],
+  "files": [
+    "lib/*.js",
+    "instructions/"
+  ],
   "exports": {
     ".": "lib/main.js"
   },
   "main": "lib/main.js",
   "dependencies": {
-    "firost": "2.17.0",
-    "golgoth": "2.1.0",
+    "firost": "4.8.0",
+    "golgoth": "3.0.0",
     "marked": "3.0.8",
     "marked-terminal": "4.2.0"
   },
   "devDependencies": {
-    "aberlaas": "1.25.0"
+    "aberlaas": "2.13.0"
   },
   "scripts": {
     "ci": "./scripts/ci",
