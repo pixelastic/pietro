@@ -12,7 +12,10 @@
     "node": ">=18.18.0"
   },
   "packageManager": "yarn@4.6.0",
-  "files": ["lib/*.js", "instructions/"],
+  "files": [
+    "lib/*.js",
+    "instructions/"
+  ],
   "exports": {
     ".": "lib/main.js"
   },
@@ -27,6 +30,8 @@
     "aberlaas": "2.13.0"
   },
   "scripts": {
+    "docker:dev": "./scripts/docker-dev",
+    "docker:run": "./scripts/docker-run",
     "ci": "./scripts/ci",
     "simulate-circleci": "./scripts/simulate-circleci",
     "husky:precommit": "./scripts/husky-precommit",

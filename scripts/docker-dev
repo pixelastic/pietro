@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+
+IMAGE_NAME="pietro"
+
+docker-image-build \
+	$IMAGE_NAME \
+	--stage dev
+
+docker-run-interactive \
+	"${IMAGE_NAME}-dev" \
+	--volume .:/app
