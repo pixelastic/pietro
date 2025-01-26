@@ -3,6 +3,7 @@ FROM alpine:3.17.3 AS base
 
 RUN apk add --no-cache \
     imagemagick=7.1.0.62-r0 \
+    poppler-utils=22.11.0-r0 \
     qpdf=11.2.0-r0 \
     sudo=1.9.12_p2-r1 \
     zsh=5.9-r0
