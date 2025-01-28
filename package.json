@@ -24,7 +24,7 @@
     "firost": "4.8.0",
     "golgoth": "3.0.0",
     "marked": "3.0.8",
-    "marked-terminal": "4.2.0"
+    "marked-terminal": "7.3.0"
   },
   "devDependencies": {
     "aberlaas": "2.13.0"
