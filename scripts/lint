@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 set -e
 
-aberlaas lint "$@"
+node_modules/.bin/aberlaas lint "$@"

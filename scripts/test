@@ -1,8 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 set -e
 
-# TODO:
-# Should also create a docker:test that builds the image and runs the tests in
-# it
-
-aberlaas test "$@"
+node_modules/.bin/aberlaas test "$@"

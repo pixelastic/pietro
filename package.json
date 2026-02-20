@@ -1,17 +1,19 @@
 {
   "name": "pietro",
   "version": "0.6.1",
-  "author": "Pixelastic <tim@pixelastic.com>",
-  "description": "Convert PDF files to PNG and text files",
-  "keywords": [],
-  "repository": "git@github.com:pixelastic/pietro.git",
   "type": "module",
+  "description": "Convert PDF files to PNG and text files",
+  "author": "Pixelastic <tim@pixelastic.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/git@github.com:pixelastic/pietro.git"
+  },
   "sideEffects": false,
   "license": "MIT",
   "engines": {
     "node": ">=18.18.0"
   },
-  "packageManager": "yarn@4.6.0",
+  "packageManager": "yarn@4.12.0",
   "files": [
     "lib/*.js",
     "Dockerfile"
@@ -20,26 +22,26 @@
     ".": "./lib/main.js"
   },
   "main": "./lib/main.js",
+  "devDependencies": {
+    "aberlaas": "2.23.0"
+  },
   "dependencies": {
-    "firost": "4.8.0",
+    "firost": "5.6.1",
     "golgoth": "3.0.0",
     "marked": "3.0.8",
     "marked-terminal": "4.2.0"
   },
-  "devDependencies": {
-    "aberlaas": "2.13.0"
-  },
   "scripts": {
+    "ci": "./scripts/ci",
+    "compress": "./scripts/compress",
     "docker:dev": "./scripts/docker-dev",
     "docker:run": "./scripts/docker-run",
-    "ci": "./scripts/ci",
-    "simulate-circleci": "./scripts/simulate-circleci",
     "husky:precommit": "./scripts/husky-precommit",
     "lint": "./scripts/lint",
     "lint:fix": "./scripts/lint-fix",
     "release": "./scripts/release",
+    "simulate-circleci": "./scripts/simulate-circleci",
     "test": "./scripts/test",
-    "test:watch": "./scripts/test-watch",
-    "compress": "./scripts/compress"
+    "test:watch": "./scripts/test-watch"
   }
 }
