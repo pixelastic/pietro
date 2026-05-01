@@ -1,6 +1,8 @@
 # OS
 FROM alpine:3.17.3 AS base
 
+# Install all CLI tools in a single layer for optimal Docker cache
+# This layer changes rarely (only on tool version updates)
 RUN apk add --no-cache \
     exiftool=12.50-r0 \
     imagemagick=7.1.0.62-r0 \
