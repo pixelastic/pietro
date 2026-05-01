@@ -36,6 +36,7 @@
     "compress": "./scripts/compress",
     "docker:dev": "./scripts/docker-dev",
     "docker:run": "./scripts/docker-run",
+    "fixtures:generate": "node ./scripts/fixtures-generate.js",
     "husky:precommit": "./scripts/husky-precommit",
     "lint": "./scripts/lint",
     "lint:fix": "./scripts/lint-fix",
