@@ -10,6 +10,7 @@ RUN apk add --no-cache \
     poppler-utils=22.11.0-r0 \
     qpdf=11.2.0-r0 \
     sudo=1.9.12_p2-r1 \
+    ttf-dejavu=2.37-r3 \
     zsh=5.9-r0
 
 # Run with same user as host, but with sudo privileges
