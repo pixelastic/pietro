@@ -1,17 +1,18 @@
 # OS
-FROM alpine:3.17.3 AS base
+FROM alpine:3.21 AS base
 
 # Install all CLI tools in a single layer for optimal Docker cache
 # This layer changes rarely (only on tool version updates)
 RUN apk add --no-cache \
-    exiftool=12.50-r0 \
-    imagemagick=7.1.0.62-r0 \
-    ocrmypdf=14.0.1-r1 \
-    poppler-utils=22.11.0-r0 \
-    qpdf=11.2.0-r0 \
-    sudo=1.9.12_p2-r1 \
-    ttf-dejavu=2.37-r3 \
-    zsh=5.9-r0
+    exiftool=13.03-r0 \
+    font-dejavu=2.37-r5 \
+    imagemagick=7.1.1.41-r0 \
+    ocrmypdf=16.4.3-r0 \
+    poppler-utils=24.02.0-r2 \
+    qpdf=11.9.1-r0 \
+    sudo=1.9.17_p1-r0 \
+    weasyprint=63.0-r0 \
+    zsh=5.9-r4
 
 # Run with same user as host, but with sudo privileges
 ARG USER_NAME

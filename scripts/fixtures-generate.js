@@ -105,13 +105,30 @@ async function createPdfWithText(filename) {
   await mkdirp(tempDir);
 
   try {
-    // Step 1: Create an image with the text rendered using ImageMagick
-    const imageCommand = `magick -size 612x792 -background white -fill black -font DejaVu-Sans -pointsize 20 -gravity center caption:"You can cut our wings, but we will always remember what it was like to fly." /app/output/text-image.png`;
-    await dockerRun(imageCommand, { outputDirectory: tempDir });
+    // Create HTML with the text content
+    const htmlContent = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+  font-family: DejaVu Sans, sans-serif;
+  font-size: 14pt;
+  padding: 2cm;
+}
+</style>
+</head>
+<body>
+<p>You can cut our wings, but we will always remember what it was like to fly.</p>
+</body>
+</html>`;
 
-    // Step 2: Use ocrmypdf to OCR the image and create a PDF with searchable text
-    const ocrCommand = `ocrmypdf --image-dpi 72 /app/input/text-image.png /app/output/${filename}`;
-    await dockerRun(ocrCommand, {
+    const htmlFile = absolute(tempDir, 'text.html');
+    await write(htmlContent, htmlFile);
+
+    // Convert HTML to PDF using weasyprint
+    const command = `weasyprint /app/input/text.html /app/output/${filename}`;
+    await dockerRun(command, {
       inputDirectory: tempDir,
       outputDirectory: fixturesDir,
     });
@@ -199,7 +216,7 @@ async function verifyFixture(filename) {
 
   try {
     const command = `qpdf --check /app/input/${filename}`;
-    const result = await dockerRun(command, { inputDirectory: fixturesDir });
+    await dockerRun(command, { inputDirectory: fixturesDir });
 
     // Get page count
     const countCommand = `qpdf --show-npages /app/input/${filename}`;
