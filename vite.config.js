@@ -11,5 +11,5 @@ export default {
     // Increase timeout for Docker operations
     testTimeout: 30000, // 30 seconds
     hookTimeout: 10000, // 10 seconds for beforeAll/afterAll hooks
-  }
+  },
 };
