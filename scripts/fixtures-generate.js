@@ -1,7 +1,9 @@
-import { createEmptyPdf } from '../lib/test-helpers/fixtures/createEmptyPdf.js';
-import { createLargePdf } from '../lib/test-helpers/fixtures/createLargePdf.js';
-import { createPdfWithImages } from '../lib/test-helpers/fixtures/createPdfWithImages.js';
-import { createPdfWithText } from '../lib/test-helpers/fixtures/createPdfWithText.js';
+import {
+  createEmptyPdf,
+  createLargePdf,
+  createPdfWithImages,
+  createPdfWithText,
+} from '../lib/testHelper/main.js';
 
 await createEmptyPdf('test-simple.pdf', 1);
 await createEmptyPdf('test-multi-3pages.pdf', 3);

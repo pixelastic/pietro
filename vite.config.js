@@ -4,6 +4,8 @@ export default {
   ...config,
   test: {
     ...config.test,
+    // Global setup - runs once before all tests
+    globalSetup: './vite.globalSetup.js',
     // Use forks pool for test isolation (important for Docker-based tests)
     pool: 'forks',
     // In Vitest 4, poolOptions are now top-level options
