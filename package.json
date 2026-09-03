@@ -23,11 +23,11 @@
   },
   "main": "./lib/main.js",
   "devDependencies": {
-    "aberlaas": "2.27.6"
+    "aberlaas": "2.39.0"
   },
   "dependencies": {
-    "firost": "5.8.0",
-    "golgoth": "3.0.0",
+    "firost": "5.11.0",
+    "golgoth": "3.1.0",
     "marked": "3.0.8",
     "marked-terminal": "4.2.0"
   },
