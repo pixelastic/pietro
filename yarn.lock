@@ -5044,6 +5044,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"golgoth@npm:4.0.0":
+  version: 4.0.0
+  resolution: "golgoth@npm:4.0.0"
+  dependencies:
+    dayjs: "npm:1.11.19"
+    flat: "npm:6.0.1"
+    got: "npm:11.8.6"
+    lodash: "npm:4.17.23"
+    p-all: "npm:5.0.1"
+    p-map: "npm:7.0.4"
+    p-props: "npm:6.1.0"
+    pify: "npm:6.1.0"
+    query-string: "npm:9.3.1"
+    time-span: "npm:5.1.0"
+    yoctocolors: "npm:2.1.2"
+  checksum: 10c0/d9a3bab4d23fdd48d0b4a70b888e2721db60147306391c28ffa672b1a91210e92ccbfdb4e6ed1038d4b52f715ee1249a261391e3135f520f2bf682922cfb833b
+  languageName: node
+  linkType: hard
+
 "gopd@npm:^1.0.1, gopd@npm:^1.2.0":
   version: 1.2.0
   resolution: "gopd@npm:1.2.0"
@@ -7249,7 +7268,7 @@ __metadata:
   dependencies:
     aberlaas: "npm:2.27.6"
     firost: "npm:5.8.0"
-    golgoth: "npm:3.0.0"
+    golgoth: "npm:4.0.0"
     marked: "npm:3.0.8"
     marked-terminal: "npm:4.2.0"
   languageName: unknown
