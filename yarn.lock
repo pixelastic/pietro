@@ -6256,12 +6256,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:3.0.8":
-  version: 3.0.8
-  resolution: "marked@npm:3.0.8"
+"marked@npm:4.0.10":
+  version: 4.0.10
+  resolution: "marked@npm:4.0.10"
   bin:
-    marked: bin/marked
-  checksum: 10c0/29958c83ece5a318fe0f292229a4691b2f945cdb265628fecbcb9570b579937a48cdc04a0e899ae247d05d024400f24acd6fa88491e43becc9182f38e06c1de2
+    marked: bin/marked.js
+  checksum: 10c0/137660cd1eca54cfcdcec9d9c7dea786fc57ba3663da9043b721aff4c1419fc869d21bc38f6d5907062b82d4ef354f4fcac6605cac5f4f9dc1595a743b856d91
   languageName: node
   linkType: hard
 
@@ -7250,7 +7250,7 @@ __metadata:
     aberlaas: "npm:2.27.6"
     firost: "npm:5.8.0"
     golgoth: "npm:3.0.0"
-    marked: "npm:3.0.8"
+    marked: "npm:4.0.10"
     marked-terminal: "npm:4.2.0"
   languageName: unknown
   linkType: soft
