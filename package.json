@@ -15,8 +15,8 @@
   },
   "packageManager": "yarn@4.18.0",
   "files": [
-    "lib/*.js",
-    "Dockerfile"
+    "./lib/*.js",
+    "./Dockerfile"
   ],
   "exports": {
     ".": "./lib/main.js"
