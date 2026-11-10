@@ -1,3 +1,9 @@
+## v0.6.3
+
+[compare changes](https://github.com/pixelastic/pietro/compare/v0.6.2...v0.6.3)
+
+Dummy release to test the trusted publish workflow.
+
 ## v0.6.2
 
 [compare changes](https://github.com/pixelastic/pietro/compare/v0.6.1...v0.6.2)
