@@ -28,7 +28,7 @@
   "dependencies": {
     "firost": "5.11.2",
     "golgoth": "4.1.1",
-    "marked": "3.0.8",
+    "marked": "4.0.10",
     "marked-terminal": "4.2.0"
   },
   "scripts": {
