@@ -42,5 +42,8 @@
     "simulate-circleci": "./scripts/simulate-circleci",
     "test": "./scripts/test",
     "test:watch": "./scripts/test-watch"
+  },
+  "aberlaas": {
+    "trustedPublisher": true
   }
 }
