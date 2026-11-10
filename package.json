@@ -11,9 +11,9 @@
   "sideEffects": false,
   "license": "MIT",
   "engines": {
-    "node": ">=18.18.0"
+    "node": ">=22.18.0"
   },
-  "packageManager": "yarn@4.12.0",
+  "packageManager": "yarn@4.18.0",
   "files": [
     "lib/*.js",
     "Dockerfile"
@@ -26,8 +26,8 @@
     "aberlaas": "2.42.0"
   },
   "dependencies": {
-    "firost": "5.8.0",
-    "golgoth": "3.0.0",
+    "firost": "5.11.2",
+    "golgoth": "4.1.1",
     "marked": "3.0.8",
     "marked-terminal": "4.2.0"
   },
