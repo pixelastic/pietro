@@ -23,7 +23,7 @@
   },
   "main": "./lib/main.js",
   "devDependencies": {
-    "aberlaas": "2.27.6"
+    "aberlaas": "2.42.0"
   },
   "dependencies": {
     "firost": "5.8.0",
