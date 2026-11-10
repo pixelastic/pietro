@@ -1,3 +1,14 @@
+## v0.6.2
+
+[compare changes](https://github.com/pixelastic/pietro/compare/v0.6.1...v0.6.2)
+
+### Features
+
+- **deps:** Update to latest aberlaas, firost and node
+  ([a0892b3](https://github.com/pixelastic/pietro/commit/a0892b3))
+- **fixtures:** Add new test fixtures with text and images
+  ([d7cefe6](https://github.com/pixelastic/pietro/commit/d7cefe6))
+
 ## [0.5.1](https://github.com/pixelastic/pietro/compare/0.5.0...0.5.1) (2019-10-27)
 
 ### Bug Fixes
