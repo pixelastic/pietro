@@ -24,10 +24,10 @@
   },
   "main": "./lib/main.js",
   "devDependencies": {
-    "aberlaas": "2.42.0"
+    "aberlaas": "2.44.0"
   },
   "dependencies": {
-    "firost": "5.11.2",
+    "firost": "5.12.0",
     "golgoth": "4.1.1"
   },
   "scripts": {
